@@ -1,9 +1,15 @@
-﻿using System;
+using System;
 
 namespace Система_Управления_Складом
 {
+    /// <summary>
+    /// Представляет класс для отображения меню и сообщений системы управления складом.
+    /// </summary>
     public class WarehouseView
     {
+        /// <summary>
+        /// Отображает главное меню системы управления складом.
+        /// </summary>
         public void ShowMenu()
         {
             Console.Clear();
@@ -16,6 +22,9 @@ namespace Система_Управления_Складом
             Console.WriteLine("\n0) Выход из системы \n");
         }
 
+        /// <summary>
+        /// Отображает меню выбора типа поставляемого товара.
+        /// </summary>
         public void ShowSupplyMenu()
         {
             Console.Clear();
@@ -29,8 +38,7 @@ namespace Система_Управления_Складом
         }
 
         /// <summary>
-        /// Приостанавливает выполнение программы и ожидает,
-        /// пока пользователь нажмёт любую клавишу.
+        /// Выводит сообщение и ожидает нажатия пользователем любой клавиши.
         /// </summary>
         public void TextMessage()
         {
