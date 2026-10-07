@@ -1,19 +1,30 @@
-﻿using System;
+using System;
 using Система_Управления_Складом.Classes;
 
 namespace Система_Управления_Складом
 {
+    /// <summary>
+    /// Управляет взаимодействием пользователя с системой управления складом.
+    /// </summary>
     public class WarehouseControls
     {
         private readonly Warehouse warehouse;
         private readonly WarehouseView warehouseView;
 
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="WarehouseControls"/>.
+        /// </summary>
+        /// <param name="warehouse">Склад, с которым будет выполняться работа.</param>
+        /// <param name="warehouseView">Объект для отображения меню и сообщений.</param>
         public WarehouseControls(Warehouse warehouse, WarehouseView warehouseView)
         {
             this.warehouse = warehouse;
             this.warehouseView = warehouseView;
         }
 
+        /// <summary>
+        /// Запускает основной цикл работы программы и обрабатывает действия пользователя.
+        /// </summary>
         public void RunProgram()
         {
             bool exit = false;
@@ -52,6 +63,9 @@ namespace Система_Управления_Складом
             }
         }
 
+        /// <summary>
+        /// Отображает меню поставки и добавляет выбранный товар на склад.
+        /// </summary>
         private void AddProduct()
         {
             bool exit = false;
@@ -111,6 +125,9 @@ namespace Система_Управления_Складом
             }
         }
 
+        /// <summary>
+        /// Отображает список товаров и выполняет отгрузку выбранного товара со склада.
+        /// </summary>
         private void RemoveProduct()
         {
             bool exit = false;
@@ -165,6 +182,9 @@ namespace Система_Управления_Складом
             }
         }
 
+        /// <summary>
+        /// Отображает информацию обо всех товарах, находящихся на складе.
+        /// </summary>
         private void ShowAllProducts()
         {
             Console.Clear();
